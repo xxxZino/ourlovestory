@@ -1,26 +1,217 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@keyframes music {
+  0% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.4); }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes heart-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--opacity, 0.8);
+  }
+  100% {
+    transform: translate3d(0, 110vh, 0) scale(1);
+    opacity: 0;
+  }
+}
+
+.falling-heart {
+  position: absolute;
+  top: -10vh;
+  animation-name: heart-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+  color: rgba(252, 231, 243, 0.9);
+  text-shadow: 0 0 12px rgba(244, 114, 182, 0.9);
+  pointer-events: none;
+}
+
+:root {
+  --background: #05010a;
+  --foreground: #fdf2f8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #05010a;
+    --foreground: #fdf2f8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes bg-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-animated-love {
+  background: radial-gradient(circle at 0% 0%, #ff9ac1 0, transparent 40%),
+    radial-gradient(circle at 100% 0%, #ffc857 0, transparent 40%),
+    radial-gradient(circle at 0% 100%, #c4a1ff 0, transparent 45%),
+    radial-gradient(circle at 100% 100%, #ff7eb3 0, transparent 45%),
+    linear-gradient(135deg, #05010a, #170016, #26001f, #3b0125);
+  background-size: 200% 200%;
+  animation: bg-move 18s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-soft {
+  animation: float-soft 10s ease-in-out infinite;
+}
+
+@keyframes float-tilt {
+  0% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+}
+
+.float-tilt {
+  animation: float-tilt 11s ease-in-out infinite;
+}
+
+@keyframes memories-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.memories-track {
+  animation: memories-marquee 32s linear infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-line {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end) 0.4s both;
+  border-right: 1px solid rgba(249, 168, 212, 0.8);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes hug-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hug-track {
+  animation: hug-marquee 34s linear infinite;
+}
+
+@keyframes heart-float-up {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-16px) scale(1.05);
+  }
+  100% {
+    transform: translateY(-32px) scale(1);
+    opacity: 0;
+  }
+}
+
+.heart-float-slow {
+  animation: heart-float-up 9s ease-in-out infinite;
+}
+.heart-float-medium {
+  animation: heart-float-up 7s ease-in-out infinite;
+}
+
+.typing-caret::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  background-color: rgba(252, 231, 243, 0.9);
+  vertical-align: middle;
+  animation: blink-caret 1s steps(1, start) infinite;
+}
+
+@keyframes blink-caret {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+/* orbit lembut biar nggak kelihatan kotak */
+.soft-orbit {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(248, 187, 208, 0.18), transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(251, 207, 232, 0.18), transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(196, 181, 253, 0.2), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(251, 191, 36, 0.16), transparent 55%),
+    rgba(0, 0, 0, 0.75);
 }
