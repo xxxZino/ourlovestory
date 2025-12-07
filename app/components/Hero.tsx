@@ -179,7 +179,7 @@ export default function Hero() {
                 what&apos;s inside
               </span>
               <span className="ml-3 text-pink-50/95">
-                photos, little stories, and tiny reasons why i still choose you.
+                little stories and tiny reasons why i still choose you.
               </span>
             </p>
           </motion.div>
@@ -193,7 +193,7 @@ export default function Hero() {
           >
             <div className="h-9 w-[2px] rounded-full bg-gradient-to-b from-pink-200/60 to-pink-400/80" />
             <div>
-              <p>Scroll pelan-pelan ya!</p>
+              <p>Scroll pelan pelan sayang</p>
             </div>
           </motion.div>
 
