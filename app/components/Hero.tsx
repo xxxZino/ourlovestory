@@ -179,7 +179,7 @@ export default function Hero() {
                 what&apos;s inside
               </span>
               <span className="ml-3 text-pink-50/95">
-                little stories and tiny reasons why i still choose you.
+                little stories, and tiny reasons why i still choose you.
               </span>
             </p>
           </motion.div>
