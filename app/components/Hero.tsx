@@ -98,7 +98,7 @@ export default function Hero() {
           >
             <span className="h-[1px] w-8 bg-gradient-to-r from-pink-200/40 via-pink-300 to-pink-200/0" />
             <span className="tracking-[0.28em] uppercase text-pink-200/80">
-              for someone i&apos;m really thankful for ☹️
+              for someone i&apos;m really thankful for...
             </span>
           </motion.div>
 
@@ -130,7 +130,7 @@ export default function Hero() {
               <br />
               is only for{" "}
               <span className="bg-gradient-to-r from-pink-300 via-fuchsia-300 to-amber-200 bg-clip-text text-transparent">
-                ega &amp; sin.
+                ega &amp; sin! 
               </span>
             </motion.h1>
 

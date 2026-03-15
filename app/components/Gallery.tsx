@@ -197,7 +197,7 @@ export default function GallerySection() {
                           {memory.tag}
                         </span>
                         <span className="rounded-full bg-black/40 px-2 py-1 backdrop-blur">
-                          #{index + 1}
+                          {index + 1}
                         </span>
                       </div>
                     </div>
