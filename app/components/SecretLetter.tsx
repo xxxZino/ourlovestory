@@ -6,11 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const SECRET_DATE = "2003-07-26";
 
 const LETTER_TEXT = `
-sayang, makasih banyak ya karna udah mau bertahan sama aku sampai detik ini... makasih karna selalu maafin aku, makasih karna selalu mau belajar dari kesalahan, makasih karna udah se sayang itu sama aku..
+wkwkwk hai... apa kabar? kerasa banget ya kalo ga ada kamu, jalanin hari rasanya berat dan lama banget, apalagi waktu malem... maafin aku ya? aku terus terusan kepikiran kamu terus, kenapa ya? kalau ga ada kegiatan sedikit aja, pasti ingetnya kamu.. jujur aku benci sih
 
-maafin aku sayang karna selalu nyakitin kamu, ngecewain kamu, marahin kamu, dan bikin kamu sedih.  maaf kalau aku banyak kurangnya bagi kamu, tapi tolong sayang aku minta 1 aja sama kamu. tetep sama aku terus ya sampai hutang kebahagiaan kamu terbayarkan.
+sakit, sedih, hampa banget banget banget anj... aku kangen banget sama kamu, pengen peluk kamu yang lama:( tapi ga bisa... 
 
-sayang, tetep jaga kesehatan kamu!!! aku ga mau liat kamu kesakitan (alaupun aku sering nyakitin kamu) aku ga mau kamu kenapa kenapa, aku mau kamu sehat dan panjang umur biar aku bisa bahagiain kamu terus:( aku sayang kamu banget bibuy, aku ga mau kehilangan kamu, aku ga mau ditinggalin kamu, aku ga mau marahan sama kamu. aku pengen kamu bahagia dan senyum terus sayang... semoga kamu selalu dipermudahkan segala urusannya ya sayang, semoga kamu bisa mencapai impian dan cita cita kamu, semoga kamu selalu semangat untuk menjalani kehidupan. aku bingung mau ngomong apa lagi wkwkwk:( POKOKNYA AKU SAYANG KAMU BANGET BIBUY, I LOVE U SO MUCH MUCH MUCH MUCH 
+huh, terimakasih banyak sinta, atas waktu, usaha, tenaga yg udah kamu kasih ke aku. aku harap kamu tetep terus melangkah maju ya, capai cita cita dan impian kamu.
+
+semoga kamu dapet cowo yg layak buat kamu, cowo yg bisa bimbing kamu, cowo yg bisa ngertiin dan hargain kamu... amin, maaf buat diri dan sifatku ya.. 
 `.trim();
 
 type TypingProps = {
